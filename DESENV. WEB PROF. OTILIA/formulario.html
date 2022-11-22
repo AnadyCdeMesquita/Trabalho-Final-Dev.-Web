@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleformulario.css">
+    <title>formulario</title>
+</head>
+<body>
+    
+    <div class="content">
+        <nav>
+            <a class="homecadastro" href="index.html">Home</a>
+          </nav>
+        
+        <h1>Cadastro de Clientes</h1>
+        
+        <form id="form">
+            <div>
+                <input type="text" placeholder="Digite seu nome" required class="inputs">
+                    <span class="span-required">O nome é obrigatorio e no minimo 3 caracteres</span>
+                </imput>
+               
+            </div>
+            
+            <div>
+                <input type="text" placeholder="Digite seu sobrenome" required class="inputs required">
+                    <span class="span-required">O sobrenome é obrigatorio e no minimo 3 caracteres</span>
+                </imput>
+            </div>
+             <div>
+                <input type="number" placeholder="Digite seu CPF completo" required class="inputs required">
+                    <span class="span-required">O CPF precisa ser de 11 caracteres</span>
+                </imput>
+            </div>
+            <div>
+                <input type="date" placeholder="" required class="date required">
+                    <span class="span-required"></span>
+                </imput>
+            </div>
+            <div>
+                <input type="email" placeholder="Digite seu email" required class="inputs required">
+                    <span class="span-required">Digite um emial válido</span>
+                </imput>
+            </div>
+            <div>
+                <input type="email" placeholder="Repita seu email" required class="inputs required">
+                    <span class="span-required">Os emails nao correspodem</span>
+                </imput>
+            </div>
+            <div>
+                <input type="password" placeholder="Repita sua senha" required class="inputs required">
+                    <span class="span-required">Digite uma senha com no minimo 8 caracteres</span>
+                </imput>
+            </div>
+            <div>
+                <input type="password" placeholder="Repita sua senha" required class="inputs required">
+                    <span class="span-required">As senhas não correspodem</span>
+                </imput>
+            </div>
+            <p>Sexo:</p>
+            <div required class="box-sect">
+                <div>
+                    <input type="radio" id="m" value="m" name="sexo">
+                    <label for="m">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" value="f" name="sexo">
+                    <label for="f">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="o" value="o" name="sexo">
+                    <label for="o">Outro</label>
+                </div>
+            </div>
+            <p>Endereço:</p>
+            <div>
+                <input type="text" placeholder="Digite o nome de sua Rua/Av" required class="inputs required">
+                    <span class="span-required">Rua é obrigatorio e no minimo 8 caracteres</span>
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite o numero da casa/apt" required class="inputs required">
+                    <span class="span-required">Número é obrigatorio e no minimo 1 caractere</span>
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Complemento" required class="inputs required">
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite o CEP" required required class="inputs required">
+                    <span class="span-required">Cep é obrigatorio</span>
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite o nome do bairro" required class="inputs required">
+                    <span class="span-required">Bairro é obrigatorio e no minimo 3 caractere</span>
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite a cidade" required class="inputs required">
+                    <span class="span-required">Cidade é obrigatorio e no minimo 3 caractere</span>
+                </imput>
+            </div>
+            <div>
+                <input type="text" placeholder="Digite o estado" required class="inputs required">
+                    <span class="span-required">Estado é obrigatorio e no minimo 2 caractere</span>
+                </imput>
+            </div>
+           <button type="submit">Enviar</button> 
+        </form>
+        
+    </div>
+</body>
+<script>
+    const form = document.getElementById('form')
+    const imput = document.querySelectorAll('.required')
+    const span = querySelectorAll('span-required')
+    const emailRgex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    function namevalidate(){
+        if (campos [0].value.length < 3)
+        {
+            console.log ('Nome deve ter 3 caracteres');
+        }
+        else
+        {
+            console.log('Validado o nome');
+        }
+
+    }
+</script>
+</html>
